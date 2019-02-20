@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulma Sample</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">​
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          BULMA SAMPLE
+        </a>
+        
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item">
+            LOGIN
+          </a>
+        </div>
+      </div>
+    </nav>
+    <main class="columns">
+      <div class="submenu column is-3">
+        <aside class="box menu">
+          <p class="menu-label">MENU 0</p>
+          <ul class="menu-list">
+            <li>MENU 0-1</li>
+          </ul>
+      </div>
+      <div class="column">
+        <div class="box content">
+          <p>本文0</p>
+        </div>
+        <div class="box content">
+          <p>本文1</p>
+        </div>
+        <div class="box content">
+          <p>本文2</p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+
+});
+  </script>
+</html>
